@@ -1,0 +1,76 @@
+{
+    "name": "drmonty/datatables-plugins",
+    "description": "Plug-ins for DataTables",
+    "type": "component",
+    "homepage": "http://www.datatables.net/",
+    "licenses": [
+        {
+            "type": "BSD",
+            "url": "http://datatables.net/license_bsd"
+        },
+        {
+            "type": "GPLv2",
+            "url": "http://datatables.net/license_gpl2"
+        }
+    ],
+    "author": {
+        "name": "Allan Jardine",
+        "url": "http://sprymedia.co.uk"
+    },
+    "keywords": [
+        "DataTables",
+        "DataTable",
+        "table",
+        "grid",
+        "filter",
+        "sort",
+        "page",
+        "internationalisable"
+    ],
+    "require": {
+        "robloach/component-installer": "*"
+    },
+    "require": {
+        "components/jquery": ">=1.7"
+    },
+    "extra": {
+        "component": {
+            "scripts": [
+                "api/*.js",
+                "features/*/*.js",
+                "filtering/*/*.js",
+                "integration/bootstrap/*/*.js",
+                "integration/foundation/*.js",
+                "integration/jqueryui/*.js",
+                "pagination/*.js",
+                "pagination/jPaginator/*.js",
+                "sorting/*.js",
+                "sorting/custom-data-source/*.js",
+                "type-detection/*.js"
+            ],
+            "files": [
+                "api/*.js",
+                "features/*/*",
+                "filtering/*/*.js",
+                "i18n/*.lang",
+                "integration/bootstrap/*/*.js",
+                "integration/bootstrap/*/*.css",
+                "integration/bootstrap/*/*.png",
+                "integration/font-awesome/*.css",
+                "integration/foundation/*.js",
+                "integration/foundation/*.css",
+                "integration/foundation/images/*.png",
+                "integration/jqueryui/*.js",
+                "integration/jqueryui/*.css",
+                "pagination/*.js",
+                "pagination/jPaginator/*.js",
+                "sorting/*.js",
+                "sorting/custom-data-source/*.js",
+                "type-detection/*.js"
+            ],
+            "shim": {
+                "deps": ["jquery"]
+            }
+        }
+    }
+}
