@@ -2,7 +2,7 @@
     "name": "drmonty-datatables-plugins",
     "repo": "drmonty/datatables-plugins",
     "description": "Plug-ins for DataTables",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "http://www.datatables.net/",
     "licenses": [
         {
@@ -41,6 +41,7 @@
         "sorting/num-html.js",
         "sorting/signed-num.js",
         "sorting/date-euro.js",
+        "sorting/datetime-moment.js",
         "sorting/title-numeric.js",
         "sorting/monthYear.js",
         "sorting/ip-address.js",
