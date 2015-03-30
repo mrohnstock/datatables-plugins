@@ -36,6 +36,17 @@
 (function(window, document, $){
 
 
+function highlight( body, table )
+{
+	// Removing the old highlighting first
+	body.unhighlight();
+
+	// Don't highlight the "not found" row, so we get the rows using the api
+	if ( table.rows( { filter: 'applied' } ).data().length ) {
+		body.highlight( table.search().split(' ') );
+	}
+}
+
 // Listen for DataTables initialisations
 $(document).on( 'init.dt.dth', function (e, settings, json) {
 	var table = new $.fn.dataTable.Api( settings );
@@ -47,19 +58,18 @@ $(document).on( 'init.dt.dth', function (e, settings, json) {
 		$.fn.dataTable.defaults.searchHighlight                    // default set
 	) {
 		table
-			.on( 'draw.dt.dth column-visibility.dt.dth', function () {
-				// On each draw highlight search results, removing the old ones
-				body.unhighlight();
-
-				// Don't highlight the "not found" row
-				if ( table.rows( { filter: 'applied' } ).data().length ) {
-					body.highlight( table.search().split(' ') );
-				}
+			.on( 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth', function () {
+				highlight( body, table );
 			} )
 			.on( 'destroy', function () {
 				// Remove event handler
-				table.off( 'draw.dt.dth column-visibility.dt.dth' );
+				table.off( 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth' );
 			} );
+
+		// initial highlight for state saved conditions and initial states
+		if ( table.search() ) {
+			highlight( body, table );
+		}
 	}
 } );
 
