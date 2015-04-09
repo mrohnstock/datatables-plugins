@@ -70,6 +70,9 @@
         "features/lengthLinks/dataTables.lengthLinks.js",
         "features/alphabetSearch/dataTables.alphabetSearch.js",
         "features/alphabetSearch/dataTables.alphabetSearch.min.js",
+        "features/conditionalPaging/dataTables.conditionalPaging.js",
+        "features/pageResize/dataTables.pageResize.js",
+        "features/pageResize/dataTables.pageResize.min.js",
         "api/fnFindCellRowNodes.js",
         "api/average().js",
         "api/fnVisibleToColumnIndex.js",
@@ -102,6 +105,7 @@
         "api/fnDisplayStart.js",
         "api/columns().order().js",
         "api/fnSetFilteringDelay.js",
+        "api/order.neutral().js",
         "type-detection/file-size.js",
         "type-detection/num-html.js",
         "type-detection/ip-address.js",
@@ -172,6 +176,9 @@
         "features/alphabetSearch/dataTables.alphabetSearch.js",
         "features/alphabetSearch/dataTables.alphabetSearch.min.js",
         "features/alphabetSearch/dataTables.alphabetSearch.css",
+        "features/conditionalPaging/dataTables.conditionalPaging.js",
+        "features/pageResize/dataTables.pageResize.js",
+        "features/pageResize/dataTables.pageResize.min.js",
         "api/fnFindCellRowNodes.js",
         "api/average().js",
         "api/fnVisibleToColumnIndex.js",
@@ -204,6 +211,7 @@
         "api/fnDisplayStart.js",
         "api/columns().order().js",
         "api/fnSetFilteringDelay.js",
+        "api/order.neutral().js",
         "type-detection/file-size.js",
         "type-detection/num-html.js",
         "type-detection/ip-address.js",
@@ -311,6 +319,8 @@
         "i18n/Basque.lang",
         "i18n/Kyrgyz.lang",
         "i18n/Mongolian.lang",
-        "i18n/Sinhala.lang"
+        "i18n/Sinhala.lang",
+        "i18n/Armenian.lang",
+        "i18n/Nepali.lang"
     ]
 }
