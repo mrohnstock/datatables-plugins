@@ -2,7 +2,7 @@
     "name": "drmonty-datatables-plugins",
     "repo": "drmonty/datatables-plugins",
     "description": "Plug-ins for DataTables",
-    "version": "1.10.6",
+    "version": "1.10.7",
     "homepage": "http://www.datatables.net/",
     "licenses": [
         {
@@ -212,6 +212,7 @@
         "api/columns().order().js",
         "api/fnSetFilteringDelay.js",
         "api/order.neutral().js",
+        "api/row().show().js",
         "type-detection/file-size.js",
         "type-detection/num-html.js",
         "type-detection/ip-address.js",

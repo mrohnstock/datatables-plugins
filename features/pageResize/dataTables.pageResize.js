@@ -1,5 +1,5 @@
 /*! PageResize for DataTables v1.0.0
- * 2014 SpryMedia Ltd - datatables.net/license
+ * 2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**
@@ -32,7 +32,7 @@
  *   `table` is a DataTable's API instance.
  *
  * For more detailed information please see:
- *     http://datatables.net/blog/
+ *     http://datatables.net/blog/2015-04-10
  */
 
 (function($){
@@ -80,7 +80,7 @@ PageResize.prototype = {
 
 		var drawRows = Math.floor( availableHeight / rowHeight );
 
-		if ( drawRows !== dt.page.len() ) {
+		if ( ! isNaN( drawRows ) && drawRows !== Infinity && drawRows !== dt.page.len() ) {
 			dt.page.len( drawRows ).draw();
 		}
 	},
@@ -100,25 +100,26 @@ PageResize.prototype = {
 				width: '100%',
 				zIndex: -1
 			} )
-			.attr( 'type', 'text/html' )
-			.attr( 'data', 'about:blank' );
+			.attr( 'type', 'text/html' );
 
 		obj[0].onload = function () {
 			var body = this.contentDocument.body;
 			var height = body.offsetHeight;
 
 			this.contentDocument.defaultView.onresize = function () {
-				var newHeight = body.offsetHeight;
+				var newHeight = body.clientHeight || body.offsetHeight;
 
 				if ( newHeight !== height ) {
 					height = newHeight;
 
 					that._size();
 				}
-			}
+			};
 		};
 
-		obj.appendTo( this.s.host );
+		obj
+			.appendTo( this.s.host )
+			.attr( 'data', 'about:blank' );
 	}
 };
 
