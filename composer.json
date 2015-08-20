@@ -50,6 +50,7 @@
             ],
             "files": [
                 "api/*.js",
+                "dataRender/*.js",
                 "features/*/*",
                 "filtering/*/*.js",
                 "i18n/*.lang",
