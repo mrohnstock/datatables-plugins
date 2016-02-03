@@ -54,6 +54,7 @@
                 "features/*/*",
                 "filtering/*/*.js",
                 "i18n/*.lang",
+                "i18n/*.json",
                 "integration/bootstrap/*/*.js",
                 "integration/bootstrap/*/*.css",
                 "integration/bootstrap/*/*.png",
