@@ -50,10 +50,10 @@
 jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml ) {
 	var esc = function ( t ) {
 		return t
-			.replace( /&/, '&amp;' )
-			.replace( /</, '&lt;' )
-			.replace( />/, '&gt;' )
-			.replace( /"/, '&quot;' );
+			.replace( /&/g, '&amp;' )
+			.replace( /</g, '&lt;' )
+			.replace( />/g, '&gt;' )
+			.replace( /"/g, '&quot;' );
 	};
 
 	return function ( d, type, row ) {
@@ -68,7 +68,7 @@ jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml )
 
 		d = d.toString(); // cast numbers
 
-		if ( d.length < cutoff ) {
+		if ( d.length <= cutoff ) {
 			return d;
 		}
 
