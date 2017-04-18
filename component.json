@@ -2,7 +2,7 @@
     "name": "drmonty-datatables-plugins",
     "repo": "drmonty/datatables-plugins",
     "description": "Plug-ins for DataTables",
-    "version": "1.10.14",
+    "version": "1.10.15",
     "homepage": "http://www.datatables.net/",
     "licenses": [
         {
